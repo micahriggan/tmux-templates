@@ -1,0 +1,24 @@
+session_name: BWS+Copay
+windows:
+- window_name: vim
+  shell_command_before:
+  - cd ~/dev/bitcore
+  panes:
+  - vim
+- window_name: BN
+  shell_command_before:
+  - cd ~/dev/bitcore
+  panes:
+  - mongo4
+  - npm run node
+- window_name: BWS 
+  shell_command_before:
+  - cd ~/dev/bitcore/packages/bitcore-wallet-service
+  panes:
+  - npm start
+  - tail -f logs/bws.log
+- window_name: Copay 
+  shell_command_before:
+  - cd ~/dev/copay
+  panes:
+  - npm run apply:copay && npm start
